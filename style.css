@@ -1,0 +1,274 @@
+/* Importação de Fonte Google (para um visual mais moderno e amigável) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* VARIÁVEIS DE CORES */
+:root {
+    --color-primary: #0A1931; /* Azul Marinho (Confiança) */
+    --color-secondary: #FFC947; /* Amarelo Ouro (Energia/Destaque) */
+    --color-text: #3C486B; /* Cinza Quente (Sofisticação) */
+    --color-white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: #F8F8F8; /* Fundo leve para o corpo */
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+/* ----------------------------------- */
+/* 1. SEÇÃO PRINCIPAL (HEADER) */
+/* ----------------------------------- */
+
+.hero-section {
+    background-color: var(--color-primary); /* Fundo de Confiança e Autoridade */
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 5%;
+    min-height: 80vh; /* Altura mínima para preencher bem a tela */
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.sub-headline {
+    font-size: 1.2em;
+    color: var(--color-secondary); /* Amarelo Ouro: Destaque e Otimismo */
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.description {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-image-placeholder {
+    width: 40%;
+    height: 400px;
+    background-color: #3C486B; /* Placeholder visualmente agradável */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+}
+
+/* BOX DE PREÇO */
+.price-box {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.price-old {
+    text-decoration: line-through;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.price-new {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: var(--color-secondary); /* Amarelo Ouro: Foco Total no Valor */
+}
+
+/* BOTÃO CTA (CHAMADA PARA AÇÃO) */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-secondary); /* Cor de Energia e Destaque */
+    color: var(--color-primary);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(255, 201, 71, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #FFDE7A; /* Variação no hover */
+    transform: translateY(-2px);
+}
+
+.cta-button i {
+    margin-right: 8px;
+}
+
+/* ----------------------------------- */
+/* 2. SEÇÃO DE BENEFÍCIOS */
+/* ----------------------------------- */
+
+.benefits-section {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: var(--color-white);
+}
+
+.benefits-section h2 {
+    font-size: 2em;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+.benefits-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.benefit-card {
+    flex-basis: calc(33% - 40px);
+    padding: 30px;
+    background-color: #F8F8F8;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.benefit-card i {
+    font-size: 2.5em;
+    color: var(--color-secondary);
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+/* ----------------------------------- */
+/* 3. RODAPÉ */
+/* ----------------------------------- */
+
+footer {
+    background-color: var(--color-text); /* Cinza Quente: Fundo sóbrio */
+    color: var(--color-white);
+    padding: 20px 5%;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+/* ----------------------------------- */
+/* RESPONSIVIDADE (Para Telas Pequenas) */
+/* ----------------------------------- */
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        order: 2; /* Move o conteúdo para baixo no mobile */
+    }
+
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-image-placeholder {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 30px;
+        order: 1; /* Move a imagem para cima no mobile */
+    }
+
+    .price-box {
+        align-items: center;
+    }
+
+    .benefit-card {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+}/* Novo Estilo para a Imagem da Capa */
+.ebook-cover {
+    width: 100%; /* Faz a imagem ocupar 100% do espaço do placeholder */
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+/* Removemos o fundo do placeholder pois a imagem o substituirá */
+.hero-image-placeholder {
+    /* ... (Mantenha as propriedades existentes como width, height, etc.) ... */
+    background-color: transparent; /* Alterado para transparente */
+    /* Remova as propriedades 'display: flex', 'justify-content', 'align-items' se necessário, 
+       mas vamos mantê-las por enquanto para o alinhamento. */
+}/
+}/* ----------------------------------- */
+/* 3. SEÇÃO DE VÍDEO PROMOCIONAL */
+/* ----------------------------------- */
+
+.video-section {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #F0F0F0;
+}
+
+.video-section h2 {
+    font-size: 2em;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+}
+
+/* Container Responsivo para o Vídeo */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto 30px auto; /* Adicionei margem inferior */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Novo estilo para o botão que aparece após o vídeo */
+.video-cta {
+    margin-top: 20px;
+}
